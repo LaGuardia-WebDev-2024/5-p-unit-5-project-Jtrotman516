@@ -1,32 +1,184 @@
-<!-- Unit 5 Project
+<!--
 Requirements
-[  ] <div> and <span>
-[  ] height: and width:
-[  ] margin: and padding: 
+[  ] Two Different Headlines
+[  ] Bold and Italic Text
+[  ] One List
 [  ] Three Images
 
 Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
-[ no ] Feature 3 - Navbar
-[ no ] Feature 4 - Shaking Animation
-[ no ] Feature 5 - Gradient Background
-[ no ] Feature 6 - Spotify Playlist
+[ no ] Feature 1 - Include at least three emojis
+[ no ] Feature 2 - Include <font> tag
+[ yes ] Feature 3 - Include Underline & Highlight
+[ no ] Feature 4 - Use Square Bullets
+[ no ] Feature 5 - Include a list within a list
 -->
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>Unit 1 Project</title>
+    <style>
+      #yellow {color:rgb(253, 218, 13); }
+      #name {color:rgb(190, 101, 220);}
+      
+      body
+  {
+        background-color: rgb(51, 221, 255);
+      }
+      h1 {
+        color: rgb(48, 173, 95);
+      }
+      img {
+        border: 6px solid;
+        color: white;
+      }
+      .line {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+      .bilbo-swash-caps-regular {
+  font-family: "Bilbo Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+        font-size:100px;
+}
+      table, th, td {border: 1px solid;}
+      body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
 
-  </style>
-</head>
-<body>
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
 
- 
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
 
-</body>
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1 class="bilbo-swash-caps-regular">Food!</h1>
+
+      <p>
+        Hi! My name is Jeremy and I am a
+        <em> <u>Board Certified </u> </em> Foodie.Food has always been an
+        important party of my life. Since a very young age I was always so
+        iterested in cooking and food shows...Chopped, MasterChef Junior, Hell's
+        Kitchen, just to name a few. Along with cooking I love going to
+        different restaurants of different price ranges and cultures!
+        <strong>
+          Do you have any recipes or restaurants you think I should try?
+          Lmk!</strong
+        >
+      </p>
+      <br /><br /><br />
+
+      <h2 id="name">Jeremy's Favorite Food</h2>
+      <br /><br /><br />
+      
+        
+        <br /><br /><br />
+
+        <div class="line">
+          <div>
+            <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://www.acozykitchen.com/wp-content/uploads/2020/10/DetroitStylePizza.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Pizza</h1> 
+      <p>Toppings</p> 
+      <p>Pepperoni,Olives,Mushrooms</p>
+    </div>
+  </div>
+</div>
+          
+             
+            <p>Pizza..any kind from any place...<mark>NO PINEAPPLES</mark></p>
+           <a href= "http://ogliastropizza.com/"> My favorite place to buy</a>
+          </div>
+
+          <div>
+            <img
+              src="https://i.ytimg.com/vi/_p3iF-bRO7E/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA9j_WYqrWM_eomcwSA2qAEr3mEew"
+              style="width: 300px; height: 200px"
+            /> <p id="yellow">Tacos</p>
+<a href="https://www.allrecipes.com/recipe/229112/ground-beef-with-homemade-taco-seasoning-mix/"> Homemade is better..here's the recipe</a>
+            <br /><br /><br />
+          </div>
+
+          <div>
+            <img
+              src="https://www.nrn.com/sites/nrn.com/files/BOB_2021_MediumRare_1.jpg"
+              style="width: 300px; height: 200px"
+            />
+            <p>
+              Steak...if you eat it anything other than medium rare...your weird
+              
+            </p>
+            <a href= "https://wolfgangpuck.com/restaurants/cut-new-york/"> My favortie steakhouse..if your broke it's not for you</a>
+          </div>
+        </div>
+    <table>
+            <thead>
+                <tr>
+                    <th>Reasonable Prices</th>
+                    <th>Pizza</th>
+                    <th>Tacos</th>
+                   <th>Steak</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td></td>
+              <td>22$</td>
+                  <td>15$(3ct.)</td>
+                  <td>35$(depends on cut)</td>
+              </tr>
+              <tr>
+              
+              </tr>
+            </tbody>
+        </table>
+    </center>
+  </body>
 </html>
